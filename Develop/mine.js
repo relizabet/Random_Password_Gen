@@ -92,30 +92,41 @@ let allArray = {
   numberArray: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 };
 
-console.log(allArray.numberArray);
-
 //randomize the output of each array, again, probably better ways to do this, but this is where we're starting
-// const randomLowerLetter =
-//   letterArray[Math.floor(Math.random() * letterArray.length)];
+const randomObject = {
+  randomLowerLetter:
+    allArray.letterArray[
+      Math.floor(Math.random() * allArray.letterArray.length)
+    ],
+  randomUpperLetter:
+    allArray.upperArray[Math.floor(Math.random() * allArray.upperArray.length)],
+  randomNumber:
+    allArray.numberArray[
+      Math.floor(Math.random() * allArray.numberArray.length)
+    ],
+  randomSpecChar:
+    allArray.specialCharArray[
+      Math.floor(Math.random() * allArray.numberArray.length)
+    ],
+};
+//get a random letter from the array
+let critLower = confirm("Would you like lowercase letters?");
+{
+  if (true) {
+    let critLower = randomObject.randomLowerLetter;
+    // console.log is working here because it is inside the scope of this definition of critLower, it will not work outside of it because at that point the def of critLower is only true, this needs to be fixed
+    console.log(critLower);
+  }
+}
 
-//working now with new upperArray letters randomized by themselves
-// const randomUpperLetter =
-//   upperArray[Math.floor(Math.random() * upperArray.length)];
-// const randomNumber =
-//   numberArray[Math.floor(Math.random() * numberArray.length)];
-// const randomSpecChar =
-//   specialCharArray[Math.floor(Math.random() * numberArray.length)];
+// const critUpper = confirm("Would you like to use uppercase letters?");
+// const critSpecial = confirm("Would you like special characters?");
+// const critNumber = prompt(
+//   "How many characters would you like? Enter a number between 8 and 128."
+// );
 
+// console.log(randomObject.randomLowerLetter + randomObject.randomNumber);
 //prompt on screen to decide what to include in the password
-const critLower = confirm("Would you like lowercase letters?");
-const critUpper = confirm("Would you like to use uppercase letters?");
-const critSpecial = confirm("Would you like special characters?");
-const critNumber = prompt(
-  "How many characters would you like? Enter a number between 8 and 128."
-);
-
-const randomCharacter =
-  letterArray[Math.floor(Math.random() * letterArray.length)];
 
 //log to console if working
 // if (critLower === true) {
@@ -135,11 +146,11 @@ const randomCharacter =
 // }
 
 //provided function code, changed var to const:
-function writePassword() {
-  const password = generatePassword();
-  const passwordText = document.querySelector("#password");
+// function writePassword() {
+//   const password = generatePassword();
+//   const passwordText = document.querySelector("#password");
 
-  //   passwordText.value = password;
-}
+//   passwordText.value = password;
+// }
 
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
