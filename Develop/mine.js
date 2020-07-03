@@ -29,6 +29,30 @@ const letterArray = [
   "y",
   "z",
 ];
+const upperArray = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+];
 const specialCharArray = [
   "`",
   "~",
@@ -70,7 +94,8 @@ const randomLowerLetter =
   letterArray[Math.floor(Math.random() * letterArray.length)];
 
 //This is not working because console log is returning the same upper an dlower case letters because the randomization is not happening separately
-const randomUpperLetter = randomLowerLetter.toUpperCase();
+const randomUpperLetter =
+  upperArray[Math.floor(Math.random() * upperArray.length)];
 const randomNumber =
   numberArray[Math.floor(Math.random() * numberArray.length)];
 const randomSpecChar =
