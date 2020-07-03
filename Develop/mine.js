@@ -68,6 +68,8 @@ const numberArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 //randomize the output of each array, again, probably better ways to do this, but this is where we're starting
 const randomLowerLetter =
   letterArray[Math.floor(Math.random() * letterArray.length)];
+
+//This is not working because console log is returning the same upper an dlower case letters because the randomization is not happening separately
 const randomUpperLetter = randomLowerLetter.toUpperCase();
 const randomNumber =
   numberArray[Math.floor(Math.random() * numberArray.length)];
