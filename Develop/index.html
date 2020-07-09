@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- bootstrap link for checkboxes -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -23,6 +31,76 @@
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+
+          <!-- checkboxes  -->
+          <div class="text-center m-1">
+            <h3>
+              What should we include in the password?
+            </h3>
+            <hr />
+          </div>
+
+          <div
+            class="row text-center align-items-center justify-content-around"
+          >
+            <!-- checkbox form referenced from bootstrap documentation: https://getbootstrap.com/docs/4.0/components/forms/  -->
+            <div class="col-sm-3 form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="lowercase"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Lowercase
+              </label>
+            </div>
+            <div class="col-sm-3 form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="uppercase"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Uppercase
+              </label>
+            </div>
+            <div class="col-sm-3 form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="number"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Numbers
+              </label>
+            </div>
+            <div class="col-sm-3 form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="symbol"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Symbols
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <!-- input type referenced from w-3 schools: https://www.w3schools.com/tags/att_input_type_number.asp -->
+          <label for="quantity">How many characters should we include?</label>
+          <input
+            class="m-1"
+            type="number"
+            id="passwordLength"
+            name="quantity"
+            min="8"
+            max="128"
+          />
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
@@ -32,30 +110,3 @@
     <script src="mine.js"></script>
   </body>
 </html>
-
-<!-- what id's do we currently have? 
-> password
-> generate
-
-> can use querySelector to traverse the DOM with these
-
-what class's do we currently have?
-> wrapper
-> card
-> card-header
-> card-body
-> card-footer
-> btn 
--->
-
-//provided var, this traverses the DOM to grab the generate ID, changed to const
-const generateBtn = document.querySelector("#generate"); // arrays that hold our
-information, there are probably a million better/cleaner ways to do this, but
-this is how we will do it for now const letterArray = [ "a", "b", "c", "d", "e",
-"f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
-"v", "x", "y", "z", ]; const upperArray = [ "A", "B", "C", "D", "E", "F", "G",
-"H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", ];
-const specialCharArray = [ "`", "~", "!", "@", "#", "$", "%", "^", "&", "*",
-"(", ")", "_", "+", "=", "-", "{", "}", "|", "[", "]", "\\", ":", '"', ";", "'",
-"<", ">", "?", ",", ".", "/", ]; const numberArray = [0, 1, 2, 3, 4, 5, 6, 7, 8,
-9];
