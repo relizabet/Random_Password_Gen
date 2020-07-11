@@ -117,11 +117,11 @@ generateBtn.addEventListener("click", clickEvent);
 // lower level functions ******************************************
 
 // function that randomizes a character output
-function randomCharFun() {
-  if (uppercaseCheck.addEventListener("click", clickEvent)) {
-    return;
-  }
+function randomCharFun(arr) {
+  return Math.floor(Math.random() * arr.length);
 }
+
+console.log(randomCharFun(lowercaseArr));
 
 // function for click event
 function clickEvent() {
