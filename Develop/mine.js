@@ -108,7 +108,7 @@ function writePassword() {
 }
 
 // capture the mouse click on the checkbox
-uppercaseCheck.addEventListener("click", clickEvent);
+// uppercaseCheck.addEventListener("click", clickEvent);
 lowercaseCheck.addEventListener("click", clickEvent);
 symbolCheck.addEventListener("click", clickEvent);
 numberCheck.addEventListener("click", clickEvent);
@@ -116,12 +116,14 @@ generateBtn.addEventListener("click", clickEvent);
 
 // lower level functions ******************************************
 
-// function for click event
-function clickEvent(event) {
-  console.log("added");
+// function that randomizes a character output
+function randomCharFun() {
+  if (uppercaseCheck.addEventListener("click", clickEvent)) {
+    return;
+  }
 }
 
-// function that takes in an array and spits out a random character
-function randomCharacter(arr) {
-  console.log(arr);
+// function for click event
+function clickEvent() {
+  console.log("added");
 }
