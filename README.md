@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![screenshot1](assets/screenshot1.png)
+![screenshot1](./assets/screenshot1.png)
 ![notworking](assets/screenshot_notworking.png)
 ![checkedworking](assets/checkedworking.png)
 ![allworking](assets/allworking.png)
