@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![Password Generator](assets/screenshot1.png)
+![Password Generator](Assets/screenshot1.png)
 ![Not Working](assets/screenshot_notworking.png)
 ![Working With Some Checks](assets/checkedworking.png)
 ![Working With All Checks](assets/allworking.png)
