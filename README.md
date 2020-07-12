@@ -6,10 +6,10 @@
 
 ## Screenshots
 
-![screenshot1](./assets/screenshot1.png)
-![notworking](assets/screenshot_notworking.png)
-![checkedworking](assets/checkedworking.png)
-![allworking](assets/allworking.png)
+![Password Generator](assets/screenshot1.png)
+![Not Working](assets/screenshot_notworking.png)
+![Working With Some Checks](assets/checkedworking.png)
+![Working With All Checks](assets/allworking.png)
 
 ## Notes
 
