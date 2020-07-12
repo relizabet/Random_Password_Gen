@@ -7,9 +7,9 @@
 ## Screenshots
 
 ![Password Generator](Assets/screenshot1.png)
-![Not Working](assets/screenshot_notworking.png)
-![Working With Some Checks](assets/checkedworking.png)
-![Working With All Checks](assets/allworking.png)
+![Not Working](Assets/screenshot_notworking.png)
+![Working With Some Checks](Assets/checkedworking.png)
+![Working With All Checks](Assets/allworking.png)
 
 ## Notes
 
