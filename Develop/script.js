@@ -14,40 +14,17 @@ const uppercaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const symbolStr = "~!@#$%^&*()_+`-={}|[]:;'<>?,./".split("");
 const numberStr = "1234567890".split("");
 
-generateBtn.addEventListener("click", generatePassword);
-// capture the mouse click on the checkbox
-// let upper = uppercaseCheck.addEventListener("click", function () {
-//   console.log("got upper");
-//   return true;
-// });
-// // let lower = lowercaseCheck.addEventListener("click", function () {
-// //   console.log("got lower");
-// //   return true;
-// // });
-// let symbol = symbolCheck.addEventListener("click", function () {
-//   return true;
-// });
-// let number = numberCheck.addEventListener("click", function () {
-//   return true;
-// });
-// let length = passwordLength.addEventListener("click", getValue);
-
-// lower level functions ******************************************
-
-// provided function code, changed var to const:
-// function writePassword() {
-//   const password = generatePassword();
-//   const passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-// }
-
-// method for checkboxes
+// creates a source array based on what checkboxes are checked by user that will be used in the generate password function
 function createSourceArr() {
+  // empty array that will have strings added onto it depending on what boxes have been checked
   let sourceArr = [];
 
-  // reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+  // reference for push https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+  // reference for spread operator https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+  // set of if statements that will push their arrays onto the sourceArr if it is true that the corresponding box has been checked in the HTML
   if (lowercaseCheck.checked) {
+    // spread operator is allowing sourceArr to be expanded by .push
     sourceArr.push(...lowercaseStr);
   }
   if (uppercaseCheck.checked) {
@@ -59,25 +36,33 @@ function createSourceArr() {
   if (numberCheck.checked) {
     sourceArr.push(...numberStr);
   }
-
+  // the function will return the completed source array with all data
   return sourceArr;
 }
 
-// generate the password
+// this function generates the password based on the source array and listens for length of the password
 function generatePassword() {
+  // allows the use of the array created based on user preferences
   let createdSourceArray = createSourceArr();
-
+  // gets the value based on user input
   desiredPasswordLength = passwordLength.value;
 
+  // checks to make sure the password is between 8 and 128, otherwise alerts an error
   if (desiredPasswordLength < 8 || desiredPasswordLength > 128) {
-    alert("Please enter a value between 8 - 128");
+    alert("Please enter a value between 8 - 128.");
   } else {
-    // get length input
+    // empty array for randomized characters based on user length
     let generatedPassword = [];
+    // randomizes however many characters user wants
     for (let i = 0; i < desiredPasswordLength; i++) {
       const index = Math.floor(Math.random() * createdSourceArray.length);
+      // final password array is then concatinated to one string
       generatedPassword = generatedPassword.concat(createdSourceArray[index]);
     }
+    // changes innerHTML of textarea element to show generated password
     printPassword.innerHTML = generatedPassword.join("");
   }
 }
+
+// when generate button is clicked, run the generate password function and print it to the screen
+generateBtn.addEventListener("click", generatePassword);
