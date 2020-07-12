@@ -1,4 +1,15 @@
-# Random_Password_Gen
+# Random Password Generator
+
+## Getting Started
+
+## Built With
+
+## Screenshots
+
+![screenshot1](assets/screenshot1.png)
+![notworking](assets/screenshot_notworking.png)
+![checkedworking](assets/checkedworking.png)
+![allworking](assets/allworking.png)
 
 ## Notes
 
