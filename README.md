@@ -1,5 +1,7 @@
 # Random Password Generator
 
+A random password generator application that allows users to get a complex password at the click of a button. Utilizes checkboxes to allow the user to decide which characters they would like to include.
+
 ## About the Project
 
 For this assignment we were asked to meet the following criteria:
